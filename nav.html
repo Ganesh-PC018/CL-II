@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.nav-links a {
+    color: rgb(255, 254, 254);
+}
+/* LOGO */
+.logo img {
+    padding-left: 25%;
+}
+/* Social Media Icons */
+.fb {
+    padding: 5px 0px 0px 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.ld {
+    color: rgb(255, 255, 255);
+    padding: 5px 0px 0px 20px;
+    font-weight: bold;
+}
+.ig {
+    color: rgb(255, 255, 255);
+    padding: 5px 0px 0px 20px;
+    font-weight: bold;
+}
+.fb:hover,
+.ig:hover,
+.ld:hover {
+    color: rgb(59, 59, 59);
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: rgb(59, 59, 59);
+    font-weight: bold;
+}
+.menu li {
+    padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+.dropdown {
+    background-color: rgb(0, 0, 0);
+    padding: 1em 0;
+    position: absolute;
+    display: none;
+    border-radius: 18px;
+    top: 35px;
+}
+.dropdown li+li {
+    margin-top: 8px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: rgb(59, 59, 59);
+}
+.services:hover .dropdown {
+    display: block;
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX TRICK */
+input[type=checkbox] {
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: rgb(59, 59, 59);
+        transition: 0.3s ease;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .dropdown li:hover {
+        background-color: rgb(59, 59, 59);
+    }
+}
+/* TEXT IN CENTER */
+.homepage {
+    font-size: 50px;
+    padding: 20% 0% 10% 35%;
+}
+@media (max-width: 768px){
+    .homepage{
+        font-size: 30px;
+        padding: 40% 0% 10% 22%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="//www.techbit.in">
+                <img src="Techbit.jpg" alt="techbit" height="50px" width="100px" srcset="">
+            </a>
+            <div class="socials">
+                <a href="https://www.facebook.com/Techbit-100123928927778"><i
+                        class="fa-brands fa-facebook-f fb"></i></a>
+                <a href="https://www.instagram.com/techbit.in/">
+                    <i class="fa-brands fa-instagram ig"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/74106141">
+                    <i class="fa-brands fa-linkedin ld"></i>
+                </a>
+            </div>
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX TRICK-->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="https://techbit.in/">Home</a></li>
+                <li><a href="https://techbit.in/aboutus/">About</a></li>
+                <li class="services">
+                    <a href="/">Blog</a>
+                    <!-- DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="https://techbit.in/programming/html/">HTML</a></li>
+                        <li><a href="https://techbit.in/programming/css/">CSS</a></li>
+                        <li><a href="https://techbit.in/programming/python/">PYTHON</a></li>
+                        <li><a href="https://techbit.in/programming/php/">PHP</a></li>
+                        <li><a href="https://techbit.in/programming/javascript/">JavaScript</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://techbit.in/contact-us/">Contact</a></li>
+                <li><a href="https://techbit.in/write-for-us/">Write For Us</a></li>
+            </div>
+        </ul>
+    </nav>
+    <div class="homepage">
+        This is the Homepage!
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default banner">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        <form class="navbar-form navbar-right navbar-form-search" role="search">
+          <div class="search-form-container hdn" id="search-input-container">
+            <div class="search-input-group">
+              <button type="button" class="btn btn-default" id="hide-search-input-container"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+              </div>
+            </div>
+            
+          </div>
+          
+          <button type="submit" class="btn btn-default" id="search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        </form>
+        <ul class="nav navbar-nav navbar-right navbar-nav-primary">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Publication</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-light sticky-top" style="background:#00F260;background: -webkit-linear-gradient(to right,#0575E6,#00F260);background: linear-gradient(to right,#0575E6,#00F260);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <img src="logo.png" width="183"></a>
+      <button class="btn btn primary mx-0 p-1 m-0 pulse-button" id="er" type="button" data-bs-toggle="modal"
+      data-bs-target="#loginModal">Enroll Now</button>
+      
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>

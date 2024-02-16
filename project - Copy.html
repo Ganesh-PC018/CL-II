@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>HOME | ASM CLASSES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+          
+        button.pulse-button {
+  animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
+}
+
+/* Initiate color change for pulse-on-hover */
+button.pulse-button-hover {
+  animation: colorShift 10000ms infinite ease-in;
+}
+
+/* Continue animation and add shine on hover */
+button:hover,
+button:focus {
+  animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
+}
+
+/* Declate color shifting animation */
+@keyframes colorShift {
+  0%, 100% {
+      background: #0045e6;
+  }
+  33% {
+    background: #fb3e3e;
+  }
+  66%{
+    background: #0dcc00;
+  }
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+  }
+}
+
+
+        .item{
+            transition: 1s;
+        }
+        .item:hover{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+        }
+
+       
+        .our-team {
+            text-align: center;
+            position: relative;
+            color: #fff;
+        }
+
+        .our-team img {
+            width: 100%;
+        }
+
+        .our-team .content {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            padding-top: 45%;
+            transform: perspective(400px) rotateX(-90deg);
+            transform-origin: center top 0;
+            transition: all 0.5s ease 0s;
+            opacity: 0;
+        }
+
+        .our-team:hover .content,
+        .our-team.active .content {
+            opacity: 1;
+            transform: perspective(400px) rotateX(0deg);
+        }
+
+        .our-team .content .title {
+            margin: 0 0 10px;
+            display: block;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .our-team .content .post {
+            margin: 0 0 25px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .our-team .social {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .our-team .social li {
+            display: inline-block;
+        }
+
+        .our-team .social li a {
+            display: block;
+            color: #fff;
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 0;
+            background-color: #f32248;
+            margin-right: 5px;
+            transition: all 0.5s ease 0s;
+            position: relative;
+        }
+
+        .our-team .social li a:hover,
+        .our-team.active .social li a {
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:990px) {
+            .our-team {
+                margin-bottom: 30px;
+            }
+        }
+
+
+      
+
+        
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(function () {
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });     
+
+        
+    </script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    
+
+</head>
+
+
+
+<body>
+
+    
+
+
+
+
+    <nav class="navbar navbar-expand-lg bg-light sticky-top" style="background:#00F260;background: -webkit-linear-gradient(to right,#0575E6,#00F260);background: linear-gradient(to right,#0575E6,#00F260);">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img src="logo.png" width="183"></a>
+          <button class="btn btn primary mx-0 p-1 m-0 pulse-button" id="er" type="button" data-bs-toggle="modal"
+          data-bs-target="#loginModal">Enroll Now</button>
+          
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+    <!--container-->
+
+
+
+    <section class="landing">
+        <video style="width:100%;height:auto;background-color: black;" autoplay="true" loop="true" muted="true"
+            poster="" src="back3.mp4"></video>
+
+    </section>
+    </div>
+
+    <!--features-->
+    <div class="container px-2 py-2" id="featured-3">
+        <h2 class="pb-2 border-bottom">Features</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <i class="fa-solid fa-person-chalkboard fa-3x"></i>
+                </div>
+                <h2>Online and Offline Teaching</h2>
+                <p>We believe in online as well as offline teaching.In both ways our teachers are serve effictively.</p>
+
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <i class="fa-solid fa-certificate fa-3x"></i>
+                </div>
+                <h2>Certified Courses</h2>
+                <p>We provide different courses for students and on completion students get Certificate for it.</p>
+
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <i class="fa-solid fa-award fa-3x"></i>
+                </div>
+                <h2>Certified Teachers</h2>
+                <p>We have no'1 techers in our faculty. Every teachers have different Speciality.</p>
+
+            </div>
+        </div>
+    </div>
+    <!--divider-->
+    <div class="b-example-divider"></div>
+
+    <!--img cards-->
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Facilities</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('card1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Computer Lab</h2>
+                        <P>learn and pratise on computers</P>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('card2.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color:black;">Projector Teaching</h2>
+                        <P>Learn with modern techonology</P>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('card3.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Doubt Solving Sessions</h2>
+                        <P>clear your doubts at any time from teachers</P>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--news-->
+    <section data-stellar-background-ratio="0.5" style="background:#00F260;background: -webkit-linear-gradient(to right,#0575E6,#00F260);background: linear-gradient(to right,#0575E6,#00F260);"">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-20 col-md-15 col-20 wow fadeInUp" data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="section-title p-20 m-10">
+                        <hr style="height: auto; color:black;">
+                        <h2 style="color: red;">News <span>&amp;</span>Announcements</h2>
+                    </div>
+                    <div class="n-3-1 wow fadeInUp" data-wow-duration="1.5s"
+                        style="visibility: visible;animation-duration: 1.5s; animation: fadeInUp;">
+                        <div class="gap2">
+                            <div class="greenline"></div>
+                            <div class="tab-pane">
+                                <div class="pressRelease">
+                                    <div class="holder dashboard" style="position: relative; overflow:hidden;
+            background-color: rgb(171, 255, 254); height: 200px !important;width: 100%;">
+                                        <marquee behavior="repeat" direction="up" scrollamount="2"
+                                            onmouseover="this.stop();" onmouseout="this.start();" height="200px"
+                                            style="font-size: 13px; color: #676767;">
+                                            <ul class="news_slide_wrap"
+                                                style="display: inline-block;text-align:justify;padding-inline-start:1px;">
+                                                <li class="slide_content_loop">
+                                                    <div class="slide_content_wrap">
+                                                        <div class="slider_news_title">
+                                                            <a href="#" style="padding: 0px; font-size:15px; font-family:'Courier New', Courier, monospace;
+                    color:#e41f05; text-align: justify; line-height: 28px; text-align: left;">
+                                                                <span id="RepeaterNews_lbNews_0">Lorem, ipsum
+                                                                    dolor sit amet consectetur adipisicing elit.
+                                                                    Atque, consectetur.</span>
+                                                            </a>
+                                                        </div>
+                                                        <br>
+                                                </li>
+                                                <li class="slide_content_loop">
+                                                    <div class="slide_content_wrap">
+                                                        <div class="slider_news_title">
+                                                            <a href="#" style="padding: 0px; font-size:15px; font-family:'Courier New', Courier, monospace;
+                    color:#e41f05; text-align: justify; line-height: 28px; text-align: left;">
+                                                                <span id="RepeaterNews_lbNews_0">Lorem, ipsum
+                                                                    dolor sit amet consectetur adipisicing elit.
+                                                                    Atque, consectetur.</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </marquee>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+
+    <!------------------------------------team---------------------------------->
+
+    <div class="container">
+        <h1>Faculty</h1>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="amar.jpg" alt="team-member" class="img-fluid">
+                    </div>
+                    <div class="content">
+                        <h3 class="title">Amar More</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="our-team ">
+                    <div class="pic">
+                        <img src="amar2.jpg" alt="team-member" class="img-fluid">
+                    </div>
+                    <div class="content">
+                        <h3 class="title">Peter Johns</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="amar3.jpg" alt="team-member" class="img-fluid">
+                    </div>
+                    <div class="content">
+                        <h3 class="title">Peter Johns</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <!--------------------------owl crousel-->
+
+    <!-- Required meta tags -->
+
+
+
+    <!-- Bootstrap CSS -->
+
+
+
+    <div class="container-fluid my-5">
+        <h1 class="text-center fw-bold display-1 mb-5">Our <span class="text-danger">Faculty</span></h1>
+        <div class="row">
+            <div class="col-12 m-auto">
+                <div class="owl-carousel owl-theme">
+                    <div class="item mb-4">
+                        <div class="card border-0 shadow">
+                            <img src="c1.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="c2.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="c3.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="c4.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="c5.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 shadow">
+                            <img src="c6.jpg" alt="" class="card-img-top" height="280px">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h4>Owl Carousel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--demo videos-->
+    <h2>Demo Lectures</h2>
+
+    <div class="card-group">
+       
+
+        <div class="card " width="18rem">
+          <video src="back1.mp4"  autoplay loop controls></video>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card mx-2">
+          <video src="back3.mp4" autoplay loop controls class="card-img-top" alt="..."></video>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card ">
+          <video src="background.mp4" autoplay loop controls class="card-img-top" alt="..."></video>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+<!--footer-->
+<BR>
+    <br>
+    
+
+        <footer class="bg-primary text-center text-lg-start text-white" style="background:#00F260;background: -webkit-linear-gradient(to right,#0575E6,#00F260);background: linear-gradient(to right,#0575E6,#00F260);">
+            <div class="container">>
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+      
+                <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+                  <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt=""
+                       loading="lazy" />
+                </div>
+      
+                <p class="text-center">Homless animal shelter The budgetary unit of the Capital City of Warsaw</p>
+      
+                <ul class="list-unstyled d-flex flex-row justify-content-center">
+                  <li>
+                    <a class="text-white px-2" href="#!">
+                      <i class="fab fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-white px-2" href="#!">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-white ps-2" href="#!">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+      
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Animals</h5>
+      
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>When your pet is missing</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Recently found</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>How to adopt?</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Pets for adoption</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Material gifts</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Help with walks</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Volunteer activities</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Animals</h5>
+      
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>General information</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>About the shelter</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Statistic data</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Job</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Tenders</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Contact</h5>
+      
+                <ul class="list-unstyled">
+                  <li>
+                    <p><i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street, Poland</p>
+                  </li>
+                  <li>
+                    <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+                  </li>
+                  <li>
+                    <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com</p>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      
+      
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+  
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: false,
+            autoplay: true,
+            autoplaySpeed: 500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
